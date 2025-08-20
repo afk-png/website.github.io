@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geetank Bio - Personal Website</title>
+  <meta name="description" content="Personal bio website of Geetank - Lua developer, gamer, and tech enthusiast. Into UFC, cyber security, and exploring scripts.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="animated-bg">
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+
+  <!-- Music Consent Modal -->
+  <div id="musicConsent" class="music-consent" style="display: none;">
+    <div class="consent-dialog">
+      <h2 class="consent-title">🎵 Enable Music?</h2>
+      <p class="consent-message">
+        This website includes background music to enhance your experience. 
+        Would you like to enable it?
+      </p>
+      <div class="consent-buttons">
+        <button class="consent-btn accept" onclick="enableMusicAndStart()" data-testid="button-enable-music">
+          Yes, Enable
+        </button>
+        <button class="consent-btn decline" onclick="skipMusicAndStart()" data-testid="button-skip-music">
+          No Thanks
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-title">
+        <span class="letter">G</span>
+        <span class="letter">e</span>
+        <span class="letter">e</span>
+        <span class="letter">t</span>
+        <span class="letter">a</span>
+        <span class="letter">n</span>
+        <span class="letter">k</span>
+        <span class="space"> </span>
+        <span class="letter">B</span>
+        <span class="letter">i</span>
+        <span class="letter">o</span>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+      <div class="loading-text">Loading...</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="mainContent" class="main-content">
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="title-wrapper">
+          <h1 class="title" data-testid="main-heading">Geetank Bio</h1>
+        </div>
+      </div>
+
+      <!-- Bio Content -->
+      <div class="bio-content">
+        <p class="content-item" data-testid="bio-intro">
+          Hello Everyone, it's me <span class="highlight">Geetank</span>. I'm just a normal person and this site is all about me. I do Lua (~25%) and tough with HTML—I'm not really a traditional coder, just a skid having fun.
+        </p>
+        
+        <p class="content-item" data-testid="bio-gaming">
+          I play Roblox occasionally (once every two weeks), and I also game Minecraft. My handles: <code>beastkiller6946</code> (Minecraft) and <code>beastkiller#6946</code> (Xbox). I'm into UFC, tech, Lua obfuscators, exploring scripts, and little bit of cyber security.
+        </p>
+        
+        <p class="content-item" data-testid="bio-interests">
+          Not a pro developer—just someone who likes tweaking, watching fights, and messing with code and community. I vibe online and enjoy low-key gaming and exploring what Lua can do.
+        </p>
+        
+        <p class="content-item" data-testid="bio-closing">
+          That's pretty much the gist—thanks a ton for stopping by!
+        </p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://github.com/afk-png" target="_blank" class="social-link" data-testid="link-github">
+          <div class="social-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </div>
+          <span>afk-png</span>
+        </a>
+        
+        <a href="#" class="social-link" data-testid="link-discord">
+          <div class="social-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.211.375-.445.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+            </svg>
+          </div>
+          <span>topggalactic</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Music Player -->
+  <iframe id="youtubePlayer" 
+          style="position: fixed; top: -1000px; left: -1000px; width: 0; height: 0;" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+          allowfullscreen
+          sandbox="allow-scripts allow-same-origin allow-presentation"
+          data-testid="youtube-player"></iframe>
+  
+  <!-- Music Status -->
+  <div id="musicStatus" class="music-status">
+    🎵 <span>Music Active</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
